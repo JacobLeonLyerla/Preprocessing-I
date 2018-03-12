@@ -130,6 +130,9 @@ table {
 * {
   box-sizing: border-box;
 }
+:root {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
@@ -145,36 +148,53 @@ h5 {
   margin-bottom: 10px;
 }
 .container {
-  width: 880px;
+  max-width: 880px;
+  width: 100%;
   margin: auto;
+  padding: 0 2.3%;
+}
+@media (max-width: 63.8rem) {
+  .container header nav {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .container header .logo {
+    order: -1;
+    margin-bottom: 2rem;
+  }
 }
 .container header {
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-around;
   background: #CF4D44;
+  padding: 2rem 0;
 }
 .container header nav {
-  margin-top: 40px;
-  width: 610px;
-  justify-content: space-between;
+  width: 70%;
+  justify-content: space-around;
   display: flex;
 }
 .container header nav a {
   text-decoration: none;
   color: #b0b0b0;
+  font-size: 1.4rem;
 }
 .container header nav a:hover {
   text-decoration: underline;
   color: black;
 }
 .container header .logo {
-  align-self: flex-end;
-  margin: 28px 0 0 91px;
+  max-width: 100%;
 }
 .container .cta {
   display: flex;
-  margin-top: 72px;
-  justify-content: flex-end;
+  margin-top: 2rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .container .cta .cta-text {
   font-size: 72px;
@@ -184,20 +204,25 @@ h5 {
   justify-content: center;
   flex-flow: column;
   align-items: center;
-  margin: 0 82px 0 0;
+  margin-right: 2%;
+  width: 50%;
 }
 .container .cta .cta-text button {
   border: 1px double black;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: white;
-  width: 170px;
-  height: 32px;
-  margin-top: 10px;
+  width: 43%;
+  min-height: 3.2rem;
+  margin: 1rem 0 2rem;
   cursor: pointer;
 }
 .container .cta .cta-text button:hover {
   background: black;
   color: white;
+}
+.container .cta img {
+  max-width: 100%;
+  min-width: 12rem;
 }
 .container .main-content {
   border-top: 2px solid black;
@@ -215,6 +240,7 @@ h5 {
 .container .main-content .middle-img {
   display: block;
   margin: 30px auto;
+  max-width: 100%;
 }
 .container .main-content .bottom-content {
   display: flex;

@@ -133,7 +133,9 @@ table {
 * {
   box-sizing: border-box;
 }
-
+:root{
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
@@ -155,52 +157,42 @@ h5 {
 @silver-Chalice: #b0b0b0;
 
 .container {
-  width: 880px;
+  max-width: 880px;
+  width: 100%;
   margin: auto;
-  @media (max-width: 768px) {
+  padding: 0 2.3%;
+  @media (max-width: 63.8rem) {
+    header{
+      nav{
+        width: 100%;
+        flex-grow: 1;
+      }
+      .logo{
+        order: -1;
+        margin-bottom: 2rem;
+      }
+    }
   }
-
   @media (max-width: 400px) {
-  }
 
+  }
   // Header Styles
   header {
     width: 100%;
     display: flex;
-
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-around;
     background: @main-color;
-
-    @media (max-width: 768px) {
-    }
-    @media (max-width: 750px) {
-    }
-
-    @media (max-width: 400px) {
-    }
-
+    padding: 2rem 0;
     nav {
-      margin-top: 40px;
-      width: 610px;
-      justify-content: space-between;
+      width: 70%;
+      justify-content: space-around;
       display: flex;
-
-      @media (max-width: 768px) {
-      }
-      @media (max-width: 750px) {
-      }
-      @media (max-width: 400px) {
-      }
-
       a {
         text-decoration: none;
         color: @silver-Chalice;
-
-        @media (max-width: 768px) {
-        }
-
-        @media (max-width: 400px) {
-        }
-
+        font-size: 1.4rem;
         &:hover {
           text-decoration: underline;
           color: black;
@@ -208,31 +200,16 @@ h5 {
       }
     }
     .logo {
-      align-self: flex-end;
-      margin: 28px 0 0 91px;
-      @media (max-width: 768px) {
-      }
-      @media (max-width: 750px) {
-      }
-
-      @media (max-width: 400px) {
-      }
+      max-width: 100%;
     }
   }
   // Call To Action (CTA) Styles
   .cta {
     display: flex;
-    margin-top: 72px;
-    justify-content: flex-end;
-    @media (max-width: 768px) {
-    }
-
-    @media (max-width: 750px) {
-    }
-
-    @media (max-width: 400px) {
-    }
-
+    margin-top: 2rem;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
     .cta-text {
       font-size: 72px;
       text-align: center;
@@ -241,42 +218,25 @@ h5 {
       justify-content: center;
       flex-flow: column;
       align-items: center;
-      margin: 0 82px 0 0;
-
-      @media (max-width: 768px) {
-      }
-
-      @media (max-width: 400px) {
-      }
-
+      margin-right: 2%;
+      width: 50%;
       button {
         border: 1px double black;
-        font-size: 16px;
+        font-size: 1.6rem;
         background: white;
-        width: 170px;
-        height: 32px;
-        margin-top: 10px;
+        width: 43%;
+        min-height: 3.2rem;
+        margin: 1rem 0 2rem;
         cursor: pointer;
         &:hover {
           background: black;
           color: white;
         }
-
-        @media (max-width: 768px) {
-        }
-
-        @media (max-width: 400px) {
-        }
       }
-      img {
-        @media (max-width: 768px) {
-          @media (max-width: 750px) {
-          }
-
-          @media (max-width: 400px) {
-          }
-        }
-      }
+    }
+    img{
+      max-width: 100%;
+      min-width: 12rem;
     }
   }
   //Main Content Styles
@@ -288,63 +248,26 @@ h5 {
     font-size: 16px;
     line-height: 18px;
     background: @accent-color;
-
-    @media (max-width: 768px) {
-    }
-
-    @media (max-width: 400px) {
-    }
-
     .top-content {
       display: flex;
       justify-content: space-around;
-
-      @media (max-width: 768px) {
-      }
-
-      @media (max-width: 400px) {
-      }
     } // content
     .middle-img {
       display: block;
       margin: 30px auto;
-
-      @media (max-width: 768px) {
-      }
-
-      @media (max-width: 400px) {
-      }
+      max-width: 100%;
     } //middle-img
     .bottom-content {
       display: flex;
       justify-content: space-around;
-
-      @media (max-width: 768px) {
-      }
-
-      @media (max-width: 400px) {
-      }
-
       p {
         padding-right: 20px;
-
-        @media (max-width: 768px) {
-        }
-
-        @media (max-width: 400px) {
-        }
       } //p
     } //.bottom-content
   } //.main-content
   //Contact Styles
   .contact {
     background: @main-color;
-    @media (max-width: 768px) {
-    }
-
-    @media (max-width: 400px) {
-    }
-
     p {
       margin: 15px 0;
     }
@@ -354,10 +277,5 @@ h5 {
   footer {
     text-align: center;
     margin: 40px 0 20px;
-    @media (max-width: 768px) {
-    }
-
-    @media (max-width: 400px) {
-    }
   }
 }
